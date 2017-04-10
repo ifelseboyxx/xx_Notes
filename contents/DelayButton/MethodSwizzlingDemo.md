@@ -6,7 +6,7 @@ categories: iOS
 
 话不多说，我们先来看下效果：
 
-![](/images/021.gif)
+![](images/021.gif)
 
 我们可以发现按钮的用法和系统一样，只是多设置了个`xx_delayTime`为`2.0f秒`，下面的打印时间间隔也是对的，优雅！
 
@@ -53,7 +53,7 @@ categories: iOS
 ```
 打印结果：
 
-![](/images/022.png)
+![](images/022.png)
 
 果不其然：`sendAction:to:forEvent:`调用优先级较高，它包装了按钮的点击事件消息并完成消息发送！
 
@@ -187,4 +187,3 @@ categories: iOS
 
 > `setter`里面如果用`_cmd`打印出来是`setXx_delayTime:`，这样上面的问题也就迎刃而解了!
 
-最后附上 [Demo](https://github.com/ifelseboyxx/DelayButtonDemo)

@@ -7,19 +7,19 @@ categories: iOS
 
 话不多说我们先来体验下 :
 
-![](/images/VC.gif)
+![](images/VC.gif)
 
 ### 什么是 Xcode 类模板 ？
 说到 Xcode 类模板有些人可能觉得陌生，其实作为一名 iOS 开发，我们每天都会用到 Xcode 类模板，例如创建一个 UIViewController，一个 Category 等等，这些其实都是 Xcode 帮我们集成好的模板。
 <!--more-->
 <a name="options" style="color:#666;border-bottom:none;";>创建系统 VC 模版 :</a>
 
-![](/images/01.png)
+![](images/01.png)
 
 ### 为什么要自定义 Xcode 类模板 ？
 当我们用 Xcode 自带的模板创建一个 UIViewController 的子类时，我们会发现 `.m` 文件会多出一些方法 :
 
-![](/images/02.png)
+![](images/02.png)
 
 而我们平时的开发中，或多或少都有自己的一些规范，尤其是在多人合作开发的情况下，一些好的开发规范是相当必要的。
 
@@ -99,7 +99,7 @@ return <#height#>;
 ### 创建自己的 Xcode 类模板
 一份成品模版结构大概这样 :
 
-![](/images/03.png)
+![](images/03.png)
 
 介绍下里面的东西 (`xxx` 就是你自定义模版的名字) :
 
@@ -182,9 +182,9 @@ print("\(object_getClassName(self)) - 释放了!")
 
 * 新建 `.xib` 重命名 `___FILEBASENAME___.xib` 并按照下图修改:
 
-![](/images/04.png)
+![](images/04.png)
 
-![](/images/05.png)
+![](images/05.png)
 
 
 上面 `.h` `.m` 里面 有些词可能不明白，这里再稍稍解释下：
@@ -206,7 +206,7 @@ print("\(object_getClassName(self)) - 释放了!")
 
 #### <a name="TemplateInfo.plist" style="color:#666;border-bottom:none;">TemplateInfo.plist</a>
 
-![](/images/06.png)
+![](images/06.png)
 
 讲解一些需要改动的东西 :
 > **SortOrder：**模版在界面中的位置；
@@ -221,7 +221,7 @@ print("\(object_getClassName(self)) - 释放了!")
 > 
 > **Suffixes：**模版默认类名，效果如下图。
 
-![](/images/07.gif)
+![](images/07.gif)
 
 最后把创建好的 `xxx.xctemplate` 文件直接拷贝到系统路径下就可以直接使用了:
 
@@ -232,7 +232,7 @@ print("\(object_getClassName(self)) - 释放了!")
 ### 修改系统模板
 平常开发中，我们经常用`xib`来画一个`View`，之前用系统的模板创建`View`的时候是有勾选是否创建对应`xib`的这个选项的，苹果不知道什么时候改了，现在貌似不行了：
 
-![](/images/08.png)
+![](images/08.png)
 
 这样导致我们创建完`View`后，还需要再创建个对应的`xib`文件，简直神烦！
 怎么能自动创建`xib`文件呢？我们完全可以修改系统的模板来满足我们的刚需：
@@ -244,11 +244,11 @@ print("\(object_getClassName(self)) - 释放了!")
 * 拷贝一份 `UIViewObjective-C`文件并改名为`UIViewXIBObjective-C`，然后到其他有`xib`的文件夹里面，拷贝一份`xib`到`UIViewXIBObjective-C`里面，`xib`可自行修改。（我这里只配置了`Objective-C`的，`Swift`步骤类似）
 * 找到 当前目录的`TemplateInfo.plist`文件，如下修改：
 
-![](/images/09.png)
+![](images/09.png)
 
 * 重新创建系统 `View`模板：
 
-![](/images/10.png)
+![](images/10.png)
 
 大功告成！
 
