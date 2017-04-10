@@ -11,7 +11,7 @@ categories: iOS
 
 ### 什么是 Xcode 类模板 ？
 说到 Xcode 类模板有些人可能觉得陌生，其实作为一名 iOS 开发，我们每天都会用到 Xcode 类模板，例如创建一个 UIViewController，一个 Category 等等，这些其实都是 Xcode 帮我们集成好的模板。
-<!--more-->
+
 <a name="options" style="color:#666;border-bottom:none;";>创建系统 VC 模版 :</a>
 
 ![](images/01.png)
