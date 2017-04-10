@@ -10,7 +10,6 @@
 
 
 | Article | Demo |
-|:---------------:| -------------:|
-|[自定义 Xcode ViewController 类模板](https://github.com/ifelseboyxx/xx_Notes/contents/XcodeTemplate/Xcode-VC-Template.md) |         $1600 |
-|[Method Swizzling 实战：优雅的延迟按钮回调](http://blog.ifelseboyxx.com/2017/02/03/MethodSwizzlingDemo/)        |           $12 |
-| are neat        |            $1 |
+|:---------------:|:-------------:|
+|[自定义 Xcode ViewController 类模板](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/XcodeTemplate/Xcode-VC-Template.md) | [xxTemplateDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/XcodeTemplate/xxTemplate/CustomVC.xctemplate) |
+|[Method Swizzling 实战：优雅的延迟按钮回调](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/DelayButton/MethodSwizzlingDemo.md)        |           [xxDelayButtonDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/DelayButton/xxDelayButtonDemo) |
