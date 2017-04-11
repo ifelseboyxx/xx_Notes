@@ -1,6 +1,6 @@
 # Notes
 
-![](images/bg.jpg)
+![](contents/images/bg.jpg)
 
 ## 为什么要创建这个库？
 
@@ -13,7 +13,7 @@
 |:---------------:|:-------------:|
 |[自定义 Xcode ViewController 类模板](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/XcodeTemplate/Xcode-VC-Template.md) | [xxTemplateDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/XcodeTemplate/xxTemplate/CustomVC.xctemplate) |
 |[Method Swizzling 实战：优雅的延迟按钮回调](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/DelayButton/MethodSwizzlingDemo.md)        |           [xxDelayButtonDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/DelayButton/xxDelayButtonDemo) |
-|[Objective-C 之多重代理](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/DelayButton/MultipleDelegate.md)|[xxMultipleDelegateDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/DelayButton/MultipleDelegateDemo)|
+|[Objective-C 之多重代理](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/MultipleDelegate/MultipleDelegate.md)|[xxMultipleDelegateDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/MultipleDelegate/MultipleDelegateDemo)|
 
 ## 勘误
 
