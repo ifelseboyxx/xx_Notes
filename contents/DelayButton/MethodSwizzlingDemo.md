@@ -1,8 +1,4 @@
----
-title: Method Swizzling 实战：优雅的延迟按钮回调
-date: 2017-02-03 21:00:00
-categories: iOS
----
+# Method Swizzling 实战：优雅的延迟按钮回调
 
 话不多说，我们先来看下效果：
 

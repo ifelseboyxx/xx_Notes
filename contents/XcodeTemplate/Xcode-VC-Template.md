@@ -1,9 +1,4 @@
----
-title: 自定义 Xcode ViewController 类模板
-date: 2017-01-02 19:46:23
-categories: iOS
----
-
+# 自定义 Xcode ViewController 类模板
 
 话不多说我们先来体验下 :
 
@@ -12,7 +7,7 @@ categories: iOS
 ### 什么是 Xcode 类模板 ？
 说到 Xcode 类模板有些人可能觉得陌生，其实作为一名 iOS 开发，我们每天都会用到 Xcode 类模板，例如创建一个 UIViewController，一个 Category 等等，这些其实都是 Xcode 帮我们集成好的模板。
 
-<a name="options" style="color:#666;border-bottom:none;";>创建系统 VC 模版 :</a>
+<a name="options" style="color:#666;border-bottom:none;">创建系统 VC 模版 :</a>
 
 ![](images/01.png)
 
@@ -103,21 +98,21 @@ return <#height#>;
 
 介绍下里面的东西 (`xxx` 就是你自定义模版的名字) :
 
-> **xxx.xctemplate：**模版文件。
+> xxx.xctemplate：模版文件。
 > 
-> **xxxObjective-C：**OC 模版文件，里面包含 `___FILEBASENAME___.h` 和 `___FILEBASENAME___.m` 两个文件。
+> xxxObjective-C：OC 模版文件，里面包含 `___FILEBASENAME___.h` 和 `___FILEBASENAME___.m` 两个文件。
 > 
-> **xxxXIBObjective-C：**比 `xxxObjective-C` 多了个 `___FILEBASENAME___.xib` 文件，可自定义。
+> xxxXIBObjective-C：比 `xxxObjective-C` 多了个 `___FILEBASENAME___.xib` 文件，可自定义。
 > 
-> **xxxSwift：**Swift模版文件，里面包含一个 `___FILEBASENAME___.swift` 文件。
+> xxxSwift：Swift模版文件，里面包含一个 `___FILEBASENAME___.swift` 文件。
 > 
-> **xxxXIBSwift：**比 `xxxSwift ` 多了个 `___FILEBASENAME___.xib` 文件，可自定义。
+> xxxXIBSwift：比 `xxxSwift ` 多了个 `___FILEBASENAME___.xib` 文件，可自定义。
 > 
-> **TemplateIcon.png：**模版显示的图片。
+> TemplateIcon.png：模版显示的图片。
 > 
-> **TemplateInfo.plist：**模版的配置信息，**[介绍](#TemplateInfo.plist)**。
+> TemplateInfo.plist：模版的配置信息，[介绍](#TemplateInfo.plist)。
 
-重新写一份模版太繁琐，我们**直接拷贝一份系统的模版来修改** ：
+重新写一份模版太繁琐，我们直接拷贝一份系统的模版来修改 ：
 
 * 拷贝 `Cocoa Class.xctemplate`，修改名称并删除不需要的文件。（我这边是  `Xcode 8.2.1`, 以后路径可能有变）
 
@@ -189,19 +184,19 @@ print("\(object_getClassName(self)) - 释放了!")
 
 上面 `.h` `.m` 里面 有些词可能不明白，这里再稍稍解释下：
 
-> 1）**DATE：**标识当前时间；
+> 1）DATE：标识当前时间；
 > 
-> 2）**FILENAME：**带文件后缀的全名；
+> 2）FILENAME：带文件后缀的全名；
 > 
-> 3）**FILEBASENAME：**不带文件后缀的名字；
+> 3）FILEBASENAME：不带文件后缀的名字；
 > 
-> 4）**FULLUSERNAME：**当前的用户名；
+> 4）FULLUSERNAME：当前的用户名；
 > 
-> 6）**PROJECTNAME：**工程名字；
+> 6）PROJECTNAME：工程名字；
 > 
-> 7）**FILEBASENAMEASIDENTIFIER：** VC类名称；
+> 7）FILEBASENAMEASIDENTIFIER：VC类名称；
 > 
-> 8）**IMPORTHEADER_cocoaSubclass：** 导入的头文件。
+> 8）IMPORTHEADER_cocoaSubclass：导入的头文件。
 
 
 #### <a name="TemplateInfo.plist" style="color:#666;border-bottom:none;">TemplateInfo.plist</a>
