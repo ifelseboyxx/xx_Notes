@@ -13,6 +13,7 @@
 
 | Article | Demo |
 |:---------------:|:-------------:|
+|[利用多态及协议多重继承统一接口数据格式](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/Protocol/Protocol.md)|[ProtocolDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/Protocol/ProtocolDemo)|
 |[UICollectionViewFlowLayout 中的一些问题](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/FlowLayoutQuestion/UICollectionViewFlowLayout_questions.md)        |           [HorizontalCollectionViewDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/FlowLayoutQuestion/HorizontalCollectionView) |
 |[Objective-C 之多重代理](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/MultipleDelegate/MultipleDelegate.md)|[MultipleDelegateDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/MultipleDelegate/MultipleDelegateDemo)|
 |[Method Swizzling 实战：优雅的延迟按钮回调](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/DelayButton/MethodSwizzlingDemo.md)        |           [DelayButtonDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/DelayButton/DelayButtonDemo) |
