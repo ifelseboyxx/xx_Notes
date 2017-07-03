@@ -1,18 +1,10 @@
----
-title: 关于 UIControlState 一次神奇的发现
-date: 2017-07-03 17:41:01
-categories: iOS
----
-
 最近发现关于 `UIButton` 状态的一个挺有意思的问题，大概就是：
 
 > 当一个按钮处于选中状态，也就是 `selected` 为 `YES` 时，如果这时候再点击它时，按钮会变成 `normal` 状态时候的样子！
 
 问题效果大概这样：
 
-![](/images/events.gif)
-
-<!--more-->
+![](images/events.gif)
 
 因为只是个 `Demo` ，所以代码写的比较随意，就是设置按钮不同状态下的呈现：
 
@@ -93,6 +85,6 @@ typedef NS_OPTIONS(NSUInteger, UIControlState) {
 
 这种问题常出现在类似**网易新闻 APP** 首页的这种界面设计下：
 
-![](/images/header_01.png)
+![](images/header_01.png)
 
 很多大厂的 APP 同样存在这种问题，比如淘宝、京东、新浪微博什么的，搞得我现在每次一看到这种界面，我都会把玩一下，遇到有问题的会心里忍不住吐槽下，没问题的会有种遇到英雄相惜的感觉，哈哈哈，手动滑稽~
