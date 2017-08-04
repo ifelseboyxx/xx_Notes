@@ -20,7 +20,6 @@
 
 @property (strong, nonatomic) NSArray <NSDictionary *> *data;
 
-//@property (strong, nonatomic) NSDictionary <NSString *, SEL> *actionDict;
 
 @end
 
@@ -57,7 +56,7 @@
             [strongSelf.tvDemo.mj_header endRefreshing];
         });
     }];
-
+    
 }
 
 
@@ -95,8 +94,6 @@
     
     NSLog(@"%@  %@",btn,userInfo);
     
-    [self.tvDemo.mj_header beginRefreshing];
-    
 }
 
 - (void)btnClick2:(UIButton *)btn userInfo:(NSDictionary *)userInfo {
@@ -107,10 +104,17 @@
 
 }
 
-- (void)cell {
+- (void)cell:(UITableViewCell *)cell userInfo:(NSDictionary *)userInfo {
     
-    NSLog(@"111");
-    [self.tvDemo.mj_header beginRefreshing];
-
+    NSIndexPath *path = userInfo[@"key"];
+    
+    
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:[NSString stringWithFormat:@"点击了 cell 第 %@ 行",@(path.row)] preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    [alertVC addAction:action];
+    
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
 }
 @end

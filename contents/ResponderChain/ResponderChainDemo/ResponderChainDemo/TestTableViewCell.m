@@ -41,7 +41,7 @@ NSString * const TestTableViewCellIdentifier = @"TestTableViewCell";
     
     [self.tvList reloadData];
     self.tvHeightConstraint.constant = self.tvList.contentSize.height;
-    
+ 
 }
 
 #pragma mark - UITableViewDataSource
@@ -60,7 +60,14 @@ NSString * const TestTableViewCellIdentifier = @"TestTableViewCell";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self routerEventWithSelectorName:@"cell" object:self userInfo:nil];
+    [self routerEventWithSelectorName:@"cell:userInfo:" object:self userInfo:@{@"key":indexPath}];
 }
 
+- (void)routerEventWithSelectorName:(NSString *)selectorName object:(id)object userInfo:(NSDictionary *)userInfo {
+    
+    NSMutableDictionary *mDict = [userInfo mutableCopy];
+    mDict[@"test"] = @"测试";
+
+    [super routerEventWithSelectorName:selectorName object:object userInfo:[mDict copy]];
+}
 @end

@@ -34,13 +34,13 @@ NSString * const TestTestTableViewCellIdentifier = @"TestTestTableViewCell";
 
 - (IBAction)btnClick1:(UIButton *)sender {
     
-    [self routerEventWithSelectorName:@"btnClick1:userInfo:" object:sender userInfo:@{@"key":@"value"}];
+    [self routerEventWithSelectorName:@"btnClick1:userInfo:" object:sender userInfo:@{@"key":@"蓝色按钮"}];
     
 }
 
 - (IBAction)btnClick2:(UIButton *)sender {
     
-    [self routerEventWithSelectorName:@"btnClick2:userInfo:" object:sender userInfo:@{@"key":@"value"}];
+    [self routerEventWithSelectorName:@"btnClick2:userInfo:" object:sender userInfo:@{@"key":@"蓝色按钮"}];
 }
 
 
