@@ -1,10 +1,3 @@
----
-title: 基于 ResponderChain 的对象交互方式
-date: 2017-08-04 10:26:23
-categories: iOS		
----
-
-
 
 > 首先感谢下 [Tian Wei Yu](https://casatwy.com/pages/about-me.html) 的 [[一种基于ResponderChain的对象交互方式](https://casatwy.com/responder_chain_communication.html)](https://casatwy.com/responder_chain_communication.html) 这篇文章，让我知道对象间的交互还有这种姿势。说实话，第一遍没看懂，自己跟着敲了一遍才理解，所以有了这篇文章，算是个记录。
 
@@ -17,12 +10,11 @@ Responder Chain ，也就是响应链，关于这方面的知识因为不是本�
 在 iOS 中，对象间的交互模式大概有这几种：直接 property 传值、delegate、KVO、block、protocol、多态、Target-Action 等等，本文介绍的是一种基于 UIResponder 对象交互方式，简而言之，就是 通过在 UIResponder上挂一个 category，使得事件和参数可以沿着 responder chain 逐步传递。对于那种 subviews 特别多，事件又需要层层传递的层级视图特别好用，但是，缺点也很明显，必须依赖于 UIResponder 对象。
 
 
-
 ### 具体事例
 
 我们先来看看下面这种很常见的界面：
 
-![Snip20170804_1](/Users/Jason/Desktop/Snip20170804_1.png)
+![](images/08-04.png)
 
 简单讲解下：最外层是个 UITableView，我们就叫做 SuperTable，每个 cell 里面又嵌套了个 UITableView，叫做 SubTable，然后这个 SubTable 的 cell 里面有一些按钮，我们理一下这个界面的层级：
 
