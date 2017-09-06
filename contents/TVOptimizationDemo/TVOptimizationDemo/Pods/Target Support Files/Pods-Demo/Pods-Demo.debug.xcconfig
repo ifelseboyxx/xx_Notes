@@ -1,0 +1,9 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/FLEX" "${PODS_ROOT}/Headers/Public/MJRefresh" "${PODS_ROOT}/Headers/Public/PLeakSniffer" "${PODS_ROOT}/Headers/Public/UITableView+FDTemplateLayoutCell" "${PODS_ROOT}/Headers/Public/XXDebugTool" "${PODS_ROOT}/Headers/Public/YYText"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/FLEX" "$PODS_CONFIGURATION_BUILD_DIR/MJRefresh" "$PODS_CONFIGURATION_BUILD_DIR/PLeakSniffer" "$PODS_CONFIGURATION_BUILD_DIR/UITableView+FDTemplateLayoutCell" "$PODS_CONFIGURATION_BUILD_DIR/XXDebugTool" "$PODS_CONFIGURATION_BUILD_DIR/YYText"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/FLEX" -isystem "${PODS_ROOT}/Headers/Public/MJRefresh" -isystem "${PODS_ROOT}/Headers/Public/PLeakSniffer" -isystem "${PODS_ROOT}/Headers/Public/UITableView+FDTemplateLayoutCell" -isystem "${PODS_ROOT}/Headers/Public/XXDebugTool" -isystem "${PODS_ROOT}/Headers/Public/YYText"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"FLEX" -l"MJRefresh" -l"PLeakSniffer" -l"UITableView+FDTemplateLayoutCell" -l"XXDebugTool" -l"YYText" -l"sqlite3" -l"z" -framework "Accelerate" -framework "CoreFoundation" -framework "CoreGraphics" -framework "CoreText" -framework "Foundation" -framework "MobileCoreServices" -framework "QuartzCore" -framework "UIKit"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods

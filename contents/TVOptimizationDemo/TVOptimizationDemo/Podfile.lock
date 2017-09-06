@@ -1,0 +1,27 @@
+PODS:
+  - FLEX (2.4.0)
+  - MJRefresh (3.1.12)
+  - PLeakSniffer (0.1.0)
+  - UITableView+FDTemplateLayoutCell (1.6)
+  - XXDebugTool (1.0.0):
+    - FLEX (~> 2.0)
+    - PLeakSniffer
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - MJRefresh
+  - UITableView+FDTemplateLayoutCell
+  - XXDebugTool (= 1.0.0)
+  - YYText
+
+SPEC CHECKSUMS:
+  FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  PLeakSniffer: f7eb13cd3a36150e0a2fd5fe8a33ca83bd2646d4
+  UITableView+FDTemplateLayoutCell: 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  XXDebugTool: 48de4e8c74325bbb268983dc0177747f86d8e497
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 30fa86cae0d09e7372f32e99b823793a5330d8e4
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XXDebugViewController">
+            <connections>
+                <outlet property="bgShadowView" destination="dtB-Gl-DoB" id="OZS-XL-2BJ"/>
+                <outlet property="debugBGView" destination="qzK-Xg-ezN" id="rZr-LE-0ZL"/>
+                <outlet property="tvDebug" destination="Z7Y-RF-gIX" id="wjt-a4-9kg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzK-Xg-ezN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-Gl-DoB">
+                    <rect key="frame" x="18.5" y="166.5" width="337.5" height="333.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z7Y-RF-gIX">
+                    <rect key="frame" x="19.5" y="167" width="337.5" height="333.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Ae2-pQ-SfV"/>
+                        <outlet property="delegate" destination="-1" id="d9w-Zi-4mq"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="dtB-Gl-DoB" firstAttribute="height" secondItem="Z7Y-RF-gIX" secondAttribute="height" id="4XR-Zl-gRS"/>
+                <constraint firstAttribute="bottom" secondItem="qzK-Xg-ezN" secondAttribute="bottom" id="62b-47-2Pu"/>
+                <constraint firstItem="dtB-Gl-DoB" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="FwF-iw-wxX"/>
+                <constraint firstItem="Z7Y-RF-gIX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Idw-P2-f8G"/>
+                <constraint firstItem="dtB-Gl-DoB" firstAttribute="width" secondItem="Z7Y-RF-gIX" secondAttribute="width" id="MMZ-Bm-5hG"/>
+                <constraint firstItem="Z7Y-RF-gIX" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="Qk1-0k-rnt"/>
+                <constraint firstItem="Z7Y-RF-gIX" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.5" id="Rxv-Ie-Mrz"/>
+                <constraint firstItem="qzK-Xg-ezN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TfI-34-eq0"/>
+                <constraint firstItem="Z7Y-RF-gIX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="il8-5h-0o0"/>
+                <constraint firstItem="dtB-Gl-DoB" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="okW-LG-32K"/>
+                <constraint firstItem="qzK-Xg-ezN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="y5N-lg-th8"/>
+                <constraint firstAttribute="trailing" secondItem="qzK-Xg-ezN" secondAttribute="trailing" id="zOg-e5-B5M"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
