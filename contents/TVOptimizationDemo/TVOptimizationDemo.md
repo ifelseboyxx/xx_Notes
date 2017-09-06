@@ -251,7 +251,3 @@ label.clipsToBounds = YES;
 ### 总结
 
 YYText 和 UITableView-FDTemplateLayoutCell 搭配可以很大程度的提高列表流畅度，如果时间比较紧迫，可以直接采取 Auto Layout + UITableView-FDTemplateLayoutCell + YYText 方式；如果列表中文本不包含富文本，仅仅显示文字，又不想引入这两个库，可以使用系统方式提前计算 Frame；如果想最大程度的流畅度，就需要使用  提前计算 Frame + YYText，具体大家根据自己情况选择合适的方案就行。
-
-
-
-最后附上[Demo]()
