@@ -9,7 +9,7 @@
 * 文本异步渲染
 
 
-![](/images/asyn.png)
+![](images/asyn.png)
 
 大家可以看看上面这张图的对比分析，数据是 iPhone6 的机子用 instruments 抓的，左边的是用 Auto Layout 绘制界面的数据分析，正常如果想平滑滚动的话，fps 至少需要稳定在 55 左右，我们可以发现，在没有缓存行高和异步渲染的情况下 fps 是最低的，可以说是比较卡顿了，至少是能肉眼感觉出来，能满足平滑滚动要求的也只有在缓存行高且异步渲染的情况下；右边的是没用 Auto Layout 直接用 frame 来绘制界面的数据分析，可以发现即使没有异步渲染，也能勉强满足平滑滚动的要求，如果开启异步渲染的话，可以说是相当的丝滑了。
 
@@ -251,15 +251,15 @@ label.clipsToBounds = YES;
 
 我们可以利用 instruments 中的 Time Profiler 来帮助我们定位问题位置，选中 Xcode，command + control + i  打开：
 
-![](/images/instruments.gif)
+![](images/instruments.gif)
 
 我们选中主线程，去掉系统的方法，然后操作一下列表，再截取一段调用信息，可以发现我们自己实现的方法并没有消耗多少时间，反而是系统的方法很费时，这也是卡顿的原因之一：
 
-![](/images/autolayout.png)
+![](images/autolayout.png)
 
 另外有的人 instruments 看不到方法调用栈（右边一对黑色的方法信息），去 Xcode 设置下就行了：
 
-![](/images/xcode.png)
+![](images/xcode.png)
 
 ### 总结
 
