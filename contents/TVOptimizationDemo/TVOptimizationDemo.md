@@ -3,7 +3,7 @@
 
 近些年，App 越来越推崇体验至上，随随便便乱写一通的话已经很难让用户买帐了，顺滑的列表便是其中很重要的一点。如果一个 App 的页面滚动起来总是卡顿卡顿的，轻则被当作反面教材来吐槽或者衬托“我们的 App balabala...”，重则直接卸载。正好最近在优化这一块儿，总结记录下。
 
-如果说有什么好的博客文章推荐，ibireme  的  [iOS 保持界面流畅的技巧](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/) 这篇堪称业界毒瘤，墙裂推荐反复阅读。这篇文章中讲解了很多的优化点，我自己总结了下收益最大的两个优化点：
+如果说有什么好的博客文章推荐，ibireme  的  [iOS 保持界面流畅的技巧](https://blog.ibireme.com/2015/11/12/smooth_user_interfaces_for_ios/) 这篇堪称经典，墙裂推荐反复阅读。这篇文章中讲解了很多的优化点，我自己总结了下收益最大的两个优化点：
 
 * 避免重复多次计算 cell 行高
 * 文本异步渲染
@@ -219,7 +219,25 @@ self.titleLabel.textLayout = model.titleLayout; //直接取 YYTextLayout
 
 #### Auto Layout 搭配异步渲染
 
-YYText  非常友好，同样支持 xib，YYText  继承自 `UIView`，正常的在 xib 中配置约束就行了，需要注意的一点是，多行文本的情况下需要设置最大换行宽：
+YYText  非常友好，同样支持 xib，YYText  继承自 `UIView`，所要做的事情也很简单：
+
+* 在 xib 中配置约束
+* 开启异步属性
+
+开启异步属性可以代码里设置，也可以直接在 xib 里设置，分别如下：
+
+```objc
+self.titleLabel.displaysAsynchronously = YES;
+self.subTitleLabel.displaysAsynchronously = YES;
+self.contentLabel.displaysAsynchronously = YES;
+self.usernameLabel.displaysAsynchronously = YES;
+self.timeLabel.displaysAsynchronously = YES;
+```
+
+![](images/ib.png)
+
+
+另外需要注意的一点是，多行文本的情况下需要设置最大换行宽：
 
 ```objective-c
 CGFloat maxLayout = [UIScreen mainScreen].bounds.size.width - 20.f;
@@ -243,7 +261,7 @@ label.layer.cornerRadius = 5.f;
 label.clipsToBounds = YES;
 ```
 
-其实据我观察，只要当前屏幕内只要设置圆角的控件个数不要太多（大概十几个算个临界点），就不会引起卡顿。
+据观察，只要当前屏幕内只要设置圆角的控件个数不要太多（大概十几个算个临界点），就不会引起卡顿。
 
 还有就是只要不设置 `clipsToBounds` 不管多少个，都不会卡顿，比如你需要圆角的控件是白色背景色的，然后它的父控件也是白色背景色的，而且没有点击后高亮的，就没必要 clipsToBounds 了。
 
@@ -263,4 +281,12 @@ label.clipsToBounds = YES;
 
 ### 总结
 
-YYText 和 UITableView-FDTemplateLayoutCell 搭配可以很大程度的提高列表流畅度，如果时间比较紧迫，可以直接采取 Auto Layout + UITableView-FDTemplateLayoutCell + YYText 方式；如果列表中文本不包含富文本，仅仅显示文字，又不想引入这两个库，可以使用系统方式提前计算 Frame；如果想最大程度的流畅度，就需要使用  提前计算 Frame + YYText，具体大家根据自己情况选择合适的方案就行。
+YYText 和 UITableView-FDTemplateLayoutCell 搭配可以很大程度的提高列表流畅度：
+
+* **如果时间比较紧迫，可以直接采取 Auto Layout + UITableView-FDTemplateLayoutCell + YYText 方式**
+
+* **如果列表中文本不包含富文本，仅仅显示文字，又不想引入这两个库，可以使用系统方式提前计算 Frame**
+
+* **如果想最大程度的流畅度，就需要提前计算 Frame + YYText，具体大家根据自己情况选择合适的方案就行**
+
+
