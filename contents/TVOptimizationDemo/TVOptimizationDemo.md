@@ -48,7 +48,7 @@ frameModel.entity = entity;
 
 * 一个简单计算 frame 、cell 行高方式：
 
-```objective-c
+```objc
 //FrameModel.h
 
 @interface FrameModel : NSObject
@@ -60,7 +60,7 @@ frameModel.entity = entity;
 @end
 ```
 
-```objective-c
+```objc
 //FrameModel.m
 
 @implementation FrameModel
@@ -88,7 +88,7 @@ _cellHeight = (CGRectGetMaxY(_titleFrame) + bottom);
 
 * 行高取值：
 
-```objective-c
+```objc
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 FrameFeedCell *cell = [tableView dequeueReusableCellWithIdentifier:FrameFeedCellIdentifier forIndexPath:indexPath];
 FrameModel *frameModel = self.data[indexPath.row];
@@ -104,7 +104,7 @@ return frameModel.cellHeight;
 
 * 控件赋值：
 
-```objective-c
+```objc
 - (void)setModel:(FrameModel *)model {
 if (!model) return;
 
@@ -135,7 +135,7 @@ self.titleLabel.text = entity.title;
 
 * 配置 frame model：
 
-```objective-c
+```objc
 //FrameYYModel.h
 
 @interface FrameYYModel : NSObject
@@ -150,7 +150,7 @@ self.titleLabel.text = entity.title;
 @end
 ```
 
-```objective-c
+```objc
 //FrameYYModel.m
 
 @implementation FrameYYModel
@@ -188,7 +188,7 @@ _cellHeight = (CGRectGetMaxY(_titleFrame) + bottom);
 
 * UITableViewCell 处理 ：
 
-```objective-c
+```objc
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
 if (!self) return nil;
@@ -207,7 +207,7 @@ return self;
 
 * 赋值：
 
-```objective-c
+```objc
 - (void)setModel:(FrameYYModel *)model {
 if (!model) return;
 _model = model;
@@ -239,7 +239,7 @@ self.timeLabel.displaysAsynchronously = YES;
 
 另外需要注意的一点是，多行文本的情况下需要设置最大换行宽：
 
-```objective-c
+```objc
 CGFloat maxLayout = [UIScreen mainScreen].bounds.size.width - 20.f;
 self.titleLabel.preferredMaxLayoutWidth = maxLayout;
 self.subTitleLabel.preferredMaxLayoutWidth = maxLayout;
@@ -256,7 +256,7 @@ YYText 的异步渲染能极大程度的提高列表流畅度，真正达到如�
 
 列表中如果存在很多系统设置的圆角页面导致卡顿：
 
-```objective-c
+```objc
 label.layer.cornerRadius = 5.f;
 label.clipsToBounds = YES;
 ```

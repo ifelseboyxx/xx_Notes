@@ -251,3 +251,5 @@ print("\(object_getClassName(self)) - 释放了!")
 [http://www.jianshu.com/p/93527682d8d3](http://www.jianshu.com/p/93527682d8d3)
 
 [http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/](http://www.bobmccune.com/2012/03/04/creating-custom-xcode-4-file-templates/)
+
+

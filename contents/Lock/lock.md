@@ -75,8 +75,8 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 >当前线程锁失败，也可以继续其它任务，用 trylock 合适
 >当前线程只有锁成功后，才会做一些有意义的工作，那就 lock，没必要轮询 trylock
 
-#### dispatch_semaphore 信号量
-****
+### dispatch_semaphore 信号量
+
 例子：
 ```objc
 dispatch_semaphore_t signal = dispatch_semaphore_create(1); //传入值必须 >=0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
@@ -129,8 +129,8 @@ dispatch_semaphore_t signal = dispatch_semaphore_create(0);
 
 可以看到这时候我们设置的 `overTime` 生效了。
 
-#### pthread_mutex 
-****
+### pthread_mutex 
+
 ibireme 在《[不再安全的 OSSpinLock](http://blog.ibireme.com/)》这篇文章中提到性能最好的 `OSSpinLock` 已经不再是线程安全的并把自己开源项目中的 `OSSpinLock` 都替换成了 `pthread_mutex`。
 特意去看了下源码，总结了下常见用法：
 
@@ -174,8 +174,8 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 ![YYKit](http://upload-images.jianshu.io/upload_images/1899027-48d96143d13a9371.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#### pthread_mutex(recursive) 
-****
+### pthread_mutex(recursive) 
+
 经过上面几种例子，我们可以发现：加锁后只能有一个线程访问该对象，后面的线程需要排队，并且 lock 和 unlock 是对应出现的，同一线程多次 lock 是不允许的，而递归锁允许同一个线程在未释放其拥有的锁时反复对该锁进行加锁操作。
 
 例子:
@@ -455,3 +455,5 @@ dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 [关于dispatch_semaphore的使用](http://www.cnblogs.com/snailHL/p/3906112.html)
 
 [实现锁的多种方式和锁的高级用法](http://www.cnblogs.com/huangjianwu/p/4575763.html)
+
+

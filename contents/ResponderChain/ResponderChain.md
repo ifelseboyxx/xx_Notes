@@ -99,7 +99,7 @@ Responder Chain ，也就是响应链，关于这方面的知识因为不是本�
 
 事件响应：
 
-```o
+```objc
 - (void)btnClick1:(UIButton *)btn userInfo:(NSDictionary *)userInfo {
     
     NSLog(@"%@  %@",btn,userInfo);
@@ -125,7 +125,7 @@ Responder Chain ，也就是响应链，关于这方面的知识因为不是本�
 
 ### 设计思路
 
-```objective-c
+```objc
 - (void)routerEventWithSelectorName:(NSString *)selectorName
                      object:(id)object
                    userInfo:(NSDictionary *)userInfo
@@ -137,7 +137,7 @@ Responder Chain ，也就是响应链，关于这方面的知识因为不是本�
 
 
 
-```obj
+```objc
 @interface NSObject (PerformSelector)
 
 - (id)performSelector:(SEL)aSelector withObjects:(NSArray <id> *)objects;
@@ -147,7 +147,7 @@ Responder Chain ，也就是响应链，关于这方面的知识因为不是本�
 
 
 
-```obj
+```objc
 @implementation NSObject (PerformSelector)
 
 - (id)performSelector:(SEL)aSelector
