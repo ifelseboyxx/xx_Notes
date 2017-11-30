@@ -107,8 +107,8 @@ static void Hook_Method(Class originalClass, SEL originalSel, Class replacedClas
     
 }
 ```
+
 > 另外，不管我们是纯代码设置的 UIWebView delegate，还是通过 IB 设置的，都是没问题~
 
 
-完整的代码在这里 [Demo]()
 
