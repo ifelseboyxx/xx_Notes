@@ -79,7 +79,7 @@ Responder Chain ，也就是响应链，关于这方面的知识因为不是本�
 
 外层 UIViewController 的接收：
 
-```obj
+```objc
 - (void)routerEventWithSelectorName:(NSString *)selectorName
                      object:(id)object
                    userInfo:(NSDictionary *)userInfo {
