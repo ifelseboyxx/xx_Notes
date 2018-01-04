@@ -1,6 +1,6 @@
 # Objective-C 中 Block 的各种定义写法
 
-## As a local variable：
+## As a local variable
 
 ```objc
 <#ReturnType#> (^<#BlockName#>)(<#ParameterType#>) = ^<#ReturnType#>(<#Parameters#>) {<#...#>};
@@ -66,7 +66,7 @@ self.myBlock(@"Atom", 18);
 @property (nonatomic, copy) NSString * (^myBlock)(NSString *name);
 ```
 
-## As a method parameter:
+## As a method parameter
 
 ```objc
 - (void)someMethodThatTakesABlock:(<#ReturnType#> (^)(<#ParameterType#>))<#blockName#>;
