@@ -13,6 +13,7 @@
 
 |                 Article                  |                   Demo                   |
 | :--------------------------------------: | :--------------------------------------: |
+| [带视差效果的轮播实现思路](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/Parallex/parallex.md)  | [ParallexDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/Parallex/ParallexDemo)  |
 |[巧用 do...while(0) 改善代码结构](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/code_tips_01/code_tip_01.md)| 无 |
 | [Objective-C 中延迟执行和取消](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/DelayWay/objc_delay.md)| 无 |
 |[Objective-C 中 Block 的各种定义写法](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/Block_Writing/block_writing.md)|  无 |
