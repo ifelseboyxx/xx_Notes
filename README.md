@@ -13,6 +13,7 @@
 
 |                 Article                  |                   Demo                   |
 | :--------------------------------------: | :--------------------------------------: |
+| [正确地获取 iOS 应用占用的内存](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/Memory_Get/memory_get.md) | 无 |
 | [iOS 电量测试方案新大陆](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/BatteryTest/battery_test.md) | 无 |
 | [带视差效果的轮播实现思路](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/Parallex/parallex.md)  | [ParallexDemo](https://github.com/ifelseboyxx/xx_Notes/tree/master/contents/Parallex/ParallexDemo)  |
 |[巧用 do...while(0) 改善代码结构](https://github.com/ifelseboyxx/xx_Notes/blob/master/contents/code_tips_01/code_tip_01.md)| 无 |
